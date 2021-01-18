@@ -70,12 +70,9 @@ int main()
             cin >> answer;
             answer = toupper(answer);
         }
-        
         if(answer == 'N')
-            exit(0);
-        
+            exit(0);      
     }while((9999.99<money_entered || money_entered<0 ) && answer == 'Y');
-    
     
     for(int i= 0; i< str_size;i++)
         v[i]= 0;
@@ -104,13 +101,11 @@ int main()
         ones_case(v);
     
     cout << "dollars and ";
-    
-    
+   
     if( 99 >= decimals >= 20)
         cout << tens << "/100";
     else
         cout << decimals << "/100";
-    
     return 0;
 }
 
@@ -121,35 +116,27 @@ void ones_case(vector<int>v)
         case 1:
             cout << "One ";
             break;
-            
         case 2:
             cout << "Two ";
-            break;
-            
+            break;    
         case 3:
             cout << "Three ";
             break;
-            
         case 4:
             cout << "Four ";
-            break;
-            
+            break;     
         case 5:
             cout << "Five ";
-            break;
-            
+            break;   
         case 6:
             cout << "Six ";
-            break;
-            
+            break; 
         case 7:
             cout << "Seven ";
             break;
-            
         case 8:
             cout << "Eight ";
-            break;
-            
+            break;       
         case 9:
             cout << "Nine ";
             break;
@@ -166,35 +153,27 @@ void teens_case(vector<int>v, int decimal_place_1, int decimal_place_2)
         case 11:
             cout << "Eleven ";
             break;
-            
         case 12:
             cout << "Twelve ";
-            break;
-            
+            break;  
         case 13:
             cout << "Thirteen ";
             break;
-            
         case 14:
             cout << "Fourteen ";
-            break;
-            
+            break;  
         case 15:
             cout << "Fifthteen ";
             break;
-            
         case 16:
             cout << "Sixteen ";
             break;
-            
         case 17:
             cout << "Seventeen ";
             break;
-            
         case 18:
             cout << "Eighteen ";
-            break;
-            
+            break; 
         case 19:
             cout << "Nineteen ";
             break;
@@ -207,32 +186,25 @@ void tens_case(vector<int>v, int decimal_place_1)
     {
         case 2:
             cout << "Twenty ";
-            break;
-            
+            break; 
         case 3:
             cout << "Thirty ";
             break;
-            
         case 4:
             cout << "Fourty ";
             break;
-            
         case 5:
             cout << "Fifty ";
-            break;
-            
+            break;  
         case 6:
             cout << "Sixty ";
             break;
-            
         case 7:
             cout << "Seventy ";
-            break;
-            
+            break; 
         case 8:
             cout << "Eighty ";
             break;
-            
         case 9:
             cout << "Ninety ";
             break;
@@ -245,36 +217,28 @@ void hundreds_case(vector<int>v)
     {
         case 1:
             cout << "One Hundred ";
-            break;
-            
+            break; 
         case 2:
             cout << "Two Hundred ";
-            break;
-            
+            break;  
         case 3:
             cout << "Three Hundred ";
-            break;
-            
+            break;    
         case 4:
             cout << "Four Hundred ";
-            break;
-            
+            break;   
         case 5:
             cout << "Five Hundred ";
             break;
-            
         case 6:
             cout << "Six Hundred ";
             break;
-            
         case 7:
             cout << "Seven Hundred ";
-            break;
-            
+            break;  
         case 8:
             cout << "Eight Hundred ";
-            break;
-            
+            break;  
         case 9:
             cout << "Nine Hundred ";
             break;
@@ -288,35 +252,27 @@ void thousands_case(vector<int>v)
         case 1:
             cout << "One Thousand ";
             break;
-            
         case 2:
             cout << "Two Thousand ";
             break;
-            
         case 3:
             cout << "Three Thousand ";
-            break;
-            
+            break; 
         case 4:
             cout << "Four Thousand ";
             break;
-            
         case 5:
             cout << "Five Thousand ";
             break;
-            
         case 6:
             cout << "Six Thousand ";
             break;
-            
         case 7:
             cout << "Seven Thousand ";
-            break;
-            
+            break;    
         case 8:
             cout << "Eight Thousand ";
-            break;
-            
+            break; 
         case 9:
             cout << "Nine Thousand ";
             break;
@@ -328,43 +284,34 @@ void configure_input(string &a)
     size_t found= a.find('.');
     if(a.length()==6 && found == 3)
         a.insert(a.begin(), '0');
-    
     if(a.length()==6 && found == 4)
         a.insert(a.end(), '0');
-    
     if(a.length()==5 && found == 2)
         a.insert(a.begin(),2, '0');
-    
     if(a.length()==5 && found == 3)
     {
         a.insert(a.begin(),1, '0');
         a.insert(a.end(), '0');
     }
-    
     if(a.length()==5 && found == 4)
         a.insert(a.end(), 2, '0');
-    
     if(a.length()==4 && found == 1)
         a.insert(a.begin(),3, '0');
-    
     if(a.length()==4 && found == 3)
     {
         a.insert(a.begin(),1, '0');
         a.insert(a.end(),2, '0');
     }
-    
     if(a.length()==4 && found == 2)
     {
         a.insert(a.begin(),2, '0');
         a.insert(a.end(),1, '0');
     }
-    
     if(a.length()==4)
     {
         a.insert(a.end(), '.');
         a.insert(a.end(),2, '0');
     }
-    
     if(a.length()==3 && found == 0)
     {
         cout << "Zero ";
@@ -380,40 +327,34 @@ void configure_input(string &a)
         a.insert(a.begin(),2, '0');
         a.insert(a.end(),2, '0');
     }
-    
     if(a.length()==3)
     {
         a.insert(a.begin(),1, '0');
         a.insert(a.end(), '.');
         a.insert(a.end(),2, '0');
     }
-    
     if(a.length()==2 && found == 0)
     {
         cout << "Zero ";
         a.insert(a.begin(),4, '0');
         a.insert(a.end(), '0');
     }
-    
     if(a.length()==2 && found == 1)
     {
         a.insert(a.begin(),3, '0');
         a.insert(a.end(),2, '0');
     }
-    
     if(a.length()==2 && found == 1)
     {
         a.insert(a.begin(),3, '0');
         a.insert(a.end(),2, '0');
     }
-    
     if(a.length()==2)
     {
         a.insert(a.begin(),2, '0');
         a.insert(a.end(), '.');
         a.insert(a.end(),2, '0');
     }
-    
     if(a.length()==1 && found!=0)
         cout << a[0];
     if(a.length()==1 && found == 0)

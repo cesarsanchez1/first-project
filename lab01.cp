@@ -4,7 +4,7 @@
  * Professor Hanping Xu
  * This program takes a monetary input from the user
  * in the form of a string. Regardless of how a quantity
- * is entered, from 0 to 9999.99, the qauntity is
+ * is entered, from 0 to 9999.99, the quantity is
  * configured to be used in a vector of size 7.
  * The user is given the option to re-enter a quantity if
  * it falls out of bounds.
